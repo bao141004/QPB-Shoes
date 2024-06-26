@@ -214,6 +214,7 @@ function tim_sp_id($IdSanPham, $IdSizeGiay, $IdMauSac)
 function capnhat_sp()
 {
     $sql = "UPDATE `sanpham` SET `TrangThai` = 1";
+    pdo_execute($sql);
 }
 function update_luotmua_sp($sl, $idsp)
 {
@@ -224,5 +225,15 @@ function update_luotmua_bienthe($sl, $idsp, $mau, $size)
 {
     $sql = "UPDATE giay_bienthe SET luotmua = luotmua + $sl WHERE IdSanPham = $idsp AND IdMauSac = $mau and IdSizeGiay = $size ";
     pdo_execute($sql);
+}
+function checkslsp($id, $mau, $size)
+{
+    $sql = "SELECT SoLuong FROM giay_bienthe WHERE IdSanPham = $id  and IdSizeGiay = $mau and IdMauSac = $size ";
+    return pdo_query_one($sql);
+}
+function checkslsp_gh($idtk, $idsp, $mau, $size)
+{
+    $sql = "SELECT SoLuongSp FROM giohang WHERE IdTaiKhoan = $idtk and IdSanPham = $idsp  and IdSizeGiay = $mau and IdMauSac = $size ";
+    return pdo_query_one($sql);
 }
 ?>
