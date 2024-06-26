@@ -66,7 +66,6 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
 					<li class="nav-item active"><a href="index.php?act=sanpham" class="nav-link">Cửa hàng</a></li>
-					<li class="nav-item"><a href="index.php?act=giamgiafree" class="nav-link">Mã giảm giá free</a></li>
 					<li class="nav-item"><a href="index.php?act=thongtin" class="nav-link">Thông tin</a></li>
 
 					<li class="nav-item"><a href="index.php?act=lienhe" class="nav-link">Liên hệ</a></li>
